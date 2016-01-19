@@ -13,10 +13,7 @@ def large_sum(input_data_file, num):
             sum_str = str(carry + reduce(lambda x, y: x + y, [r[-i] for r in input_data_list]))
             large_sum = sum_str[-1] + large_sum
             carry = int(sum_str[:-1])
-
-
         return (str(carry) + large_sum)[:num]
-
 
 #Test
 print large_sum('input_data', 10)
